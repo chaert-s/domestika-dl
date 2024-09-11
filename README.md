@@ -5,24 +5,23 @@ This script is a simple way to download a full course from Domestika.
 > **Warning**
 > You must own the courses you wish to download. Courses downloaded via Domestica Plus do not contain the "Final project"
 
-## Installation
+## Installation and usage
 
-Once you downloaded the Project, open the "index.js" file.
+This script allows multiple courses to be downloaded at once. Paste all courses you want in a file named ```courses.txt``` in the root folder of this repo. Paste each course on a seperate line in this format:
+
+https://www.domestika.org/en/courses/3086-creating-animated-stories-with-after-effects/course
+
+IMPORTANT: you have to be on the "content" page of the course. You know you are on the right page when the URL ends with "/course".
+
+Then, open the "index.js" file.
 
 You will find the following variables:
 
 ```bash
-  const course_url = '';
   const subtitle_lang = 'en';
   const cookies;
   const _credentials_ = "";
 ```
-
-The course_url is just the full URL of the course you want to download. For example:
-
-https://www.domestika.org/en/courses/3086-creating-animated-stories-with-after-effects/course
-
-IMPORTANT: you have to be on the "content" page. You know you are on the right site when at the end of the URL it says "/course".
 
 To get the _domestika_session and the \_credentials_ you will need to install a chrome extension called Cookie-Editor.
 
@@ -30,7 +29,7 @@ After you installed the extension, log into domestika and open the extension.
 
 In the window popup, look for "\_domestika_session", click to open it and copy the contents of the Value field into the value field under cookies.
 
-then look for the "_credentials_" cookie, copy the value of that into the "_credentials_" variable.
+Then look for the "_credentials_" cookie, copy the value of that into the "_credentials_" variable.
 
 If you want to change the subtitles that will be downloaded, just put the preferred language into the "subtitle_lang" variable. But make sure the language is avaiable first.
 
